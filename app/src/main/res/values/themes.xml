@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DemoAndroid04" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.DemoAndroid04" parent="Base.Theme.DemoAndroid04" />
+
+    <style name="ProfileTextStyle">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="DetailIconStyle">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:backgroundTint">#84878c</item>
+    </style>
+</resources>

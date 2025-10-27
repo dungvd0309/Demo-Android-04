@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@null"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_back"
+            android:drawableTint="@color/black" />
+
+        <ImageButton
+            android:id="@+id/btnSearch"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@null"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_search"
+            android:drawableTint="@color/black" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/backgroundView"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="100dp">
+
+            <View
+                android:layout_width="166dp"
+                android:layout_height="166dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circular_shape"/>
+
+            <ImageView
+                android:id="@+id/avatarView"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circular_shape"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/avatar" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/ProfileTextStyle"
+            android:id="@+id/tvProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Nguyễn Văn A"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                style="@style/ProfileTextStyle"
+                android:id="@+id/tvFriendNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/ProfileTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" người bạn" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/buttonSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:useDefaultMargins="true"
+        android:layout_marginHorizontal="8dp">
+
+        <Button
+            style="@style/ProfileTextStyle"
+            android:id="@+id/btnAddStory"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/cornered_button"
+            android:textColor="@color/white"
+            app:backgroundTint="#0865fe"
+            android:text="Thêm vào tin"
+            android:textStyle="bold"
+            android:padding="0dp"
+            android:layout_columnSpan="2"/>
+
+        <Button
+            style="@style/ProfileTextStyle"
+            android:id="@+id/btnProfileEdit"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_columnWeight="1"
+            android:background="@drawable/cornered_button"
+            app:backgroundTint="#e2e5ea"
+            android:text="Chỉnh sửa trang cá nhân"
+            android:textStyle="bold"
+            android:padding="0dp"/>
+
+        <Button
+            style="@style/ProfileTextStyle"
+            android:id="@+id/btnProfileOther"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/cornered_button"
+            app:backgroundTint="#e2e5ea"
+            android:text="..."
+            android:textStyle="bold"
+            android:padding="0dp"/>
+    </GridLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginVertical="8dp"
+        android:backgroundTint="#a8abb2"
+        android:background="@drawable/line"/>
+
+    <LinearLayout
+        android:id="@+id/detailSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/ProfileTextStyle"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Chi tiết"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp">
+
+            <View
+                style="@style/DetailIconStyle"
+                android:background="@drawable/ic_person" />
+
+            <TextView
+                style="@style/ProfileTextStyle"
+                android:id="@+id/tvGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nam"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp">
+            <View
+                style="@style/DetailIconStyle"
+                android:background="@drawable/ic_birthday"/>
+            <TextView
+                style="@style/ProfileTextStyle"
+                android:id="@+id/tvBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1 tháng 1 năm 2001"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp">
+            <View
+                style="@style/DetailIconStyle"
+                android:background="@drawable/ic_location"/>
+            <TextView
+                style="@style/ProfileTextStyle"
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Đến từ Hà Nội"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp">
+            <View
+                style="@style/DetailIconStyle"
+                android:background="@drawable/ic_phone"/>
+            <TextView
+                style="@style/ProfileTextStyle"
+                android:id="@+id/tvPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="09123456789"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
